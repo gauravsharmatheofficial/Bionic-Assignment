@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica"), url("./Font/Helvetica.woff") format("woff");
+}
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ab3c3c;
+  --secondary-color: #314b57;
+  --body-txt-color: #5d5d5e;
+  --white-color: #ffffff;
+  --heading-font: "Roboto Slab", serif;
+  --body-font: "Helvetica", sans-serif;
+}
+
+p,
+a {
+  font-family: var(--body-font);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 1px;
+  color: var(--body-txt-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Services Section */
+.services-section {
+  background-color: var(--secondary-color);
+}
+
+.services-section h1 {
+  font-size: 1.3rem;
+  color: var(--white-color);
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.services-grid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+  gap: 20px;
+}
+.service-content {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.service-container {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.service-item img {
+  max-width: 140px;
+}
+
+.service-item a {
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Map Section */
+
+.map-section {
+  max-width: 40%;
+}
+.map-section img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Our Service Area Section  */
+.service-area {
+  display: flex;
+  gap: 40px;
+}
+.service-area-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-area-section h1,
+.article-section h1 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: var(--heading-font);
+  text-decoration: none;
+  padding-bottom: 20px;
+}
+
+.service-area-section h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+.service-area-section a {
+  font-size: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.service-area-section,
+.article-section {
+  padding: 30px 10px;
+}
+
+/* Article Section */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.article-section a {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.single-article p {
+  padding-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.single-article img {
+  width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .service-content {
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-container {
+    width: 100%;
+  }
+  .map-section {
+    max-width: 100%;
+  }
+  .service-container h1,
+  .service-area-section h1,
+  .article-section h1 {
+    text-align: center;
+  }
+  .service-item img {
+    max-width: 100%;
+  }
+  .service-item a {
+    font-size: 0.9rem;
+  }
+  .service-area {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .services-grid {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-area-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .service-area-content p,
+  .single-article p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .service-item img {
+    max-width: 100px;
+    max-height: 100px;
+  } */
+
+  .service-area-section h1 {
+    font-size: 2rem;
+  }
+
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+}
